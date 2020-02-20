@@ -7,3 +7,5 @@
 /service-feign/target/
 /service-ribbon/target/
 /service-zuul/target/
+**.iml
+/.idea/
