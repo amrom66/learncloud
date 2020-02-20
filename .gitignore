@@ -1,0 +1,9 @@
+# Project exclude paths
+/config-client/target/
+/config-server/target/
+/service-a/target/
+/service-b/target/
+/service-eureka/target/
+/service-feign/target/
+/service-ribbon/target/
+/service-zuul/target/

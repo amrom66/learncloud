@@ -1,0 +1,22 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+server:
+  port: 8764
+spring:
+  application:
+    name: service-ribbon
+hystrix:
+  dashboard:
+    enable-ignore-connection-close-header: true
+  metrics:
+    polling-interval-ms: 200
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
