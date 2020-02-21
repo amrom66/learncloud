@@ -1,11 +1,13 @@
 server:
   port: 8771
 spring:
-  application:
-    name: config-client
-  cloud:
-    config:
-      label: master
-      uri: http://localhost:8770/
-      profile: dev
-      request-connect-timeout: 10000
+  rabbitmq:
+    host: 192.168.126.138
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

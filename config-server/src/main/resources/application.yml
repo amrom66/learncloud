@@ -1,3 +1,7 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 server:
   port: 8770
 spring:
@@ -7,9 +11,16 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/linjinbao66/springcloudconfig/
+          uri: https://gitee.com/linjinbao/SpringcloudConfig/
           search-paths: config
           username:
           password:
       label: master
-
+  rabbitmq:
+    port: 5672
+    host: 192.168.126.138
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
