@@ -1,4 +1,4 @@
-package tk.amrom.serviehi;
+package tk.amrom.servicemiya;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,37 +10,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-@SpringBootApplication
 @RestController
-public class ServiceHiApplication {
-
+@SpringBootApplication
+public class ServiceMiYaApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ServiceHiApplication.class, args);
+        SpringApplication.run(ServiceMiYaApplication.class,args);
+    }
+    private static final Logger LOG = LoggerFactory.getLogger(ServiceMiYaApplication.class);
+    @RequestMapping("/hi")
+    public String home(){
+        LOG.info("hi is being called");
+        return "hi i'm miya!";
     }
 
-    private static final Logger LOG = LoggerFactory.getLogger(ServiceHiApplication.class);
+    @RequestMapping("/miya")
+    public String info(){
+        LOG.info("info is being called");
+        return restTemplate.getForObject("http://localhost:8988/info",String.class);
+    }
 
     @Autowired
     private RestTemplate restTemplate;
+
     @Bean
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
-    @RequestMapping("/hi")
-    public String callHome(){
-        LOG.info("calling trace service-hi  ");
-        return restTemplate.getForObject("http://localhost:8989/miya", String.class);
-    }
-    @RequestMapping("/info")
-    public String info(){
-        LOG.info("calling trace service-hi ");
-        return "i'm service-hi";
-
-    }
-
-//    @Bean
-//    public AlwaysSampler defaultSampler(){
-//        return new AlwaysSampler();
-//    }
-
 }

@@ -1,7 +1,7 @@
 server:
-  port: 8988
+  port: 8989
 spring:
   zipkin:
     base-url: http://192.168.126.138:9411
   application:
-    name: service-hi
+    name: service-miya

@@ -10,11 +10,11 @@
         <module name="service-b" />
         <module name="service-a" />
         <module name="config-server" />
-        <module name="server-zipkin" />
+        <module name="service-ribbon" />
         <module name="service-feign" />
         <module name="service-eureka" />
         <module name="service-hi" />
-        <module name="service-ribbon" />
+        <module name="server-zipkin" />
         <module name="service-miya" />
         <module name="service-zuul" />
       </profile>
