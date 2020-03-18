@@ -28,6 +28,7 @@
         <module>config-client</module>
         <module>service-hi</module>
         <module>service-miya</module>
+        <module>service-sentinel</module>
     </modules>
 
 </project>

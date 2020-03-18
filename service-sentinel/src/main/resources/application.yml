@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: service-sentinel
+  cloud:
+    sentinel:
+      eager: true
+      transport:
+        port: 192.168.126.138:8719
+        dashboard: 192.168.126.138:8858
+        heartbeat-interval-ms: 500
