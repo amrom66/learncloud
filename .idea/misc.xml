@@ -15,6 +15,7 @@
       <set>
         <option value="$PROJECT_DIR$/register-center/pom.xml" />
         <option value="$PROJECT_DIR$/server-zipkin/pom.xml" />
+        <option value="$PROJECT_DIR$/service-nacos/pom.xml" />
         <option value="$PROJECT_DIR$/service-one/pom.xml" />
       </set>
     </option>

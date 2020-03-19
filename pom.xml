@@ -29,6 +29,7 @@
         <module>service-hi</module>
         <module>service-miya</module>
         <module>service-sentinel</module>
+        <module>service-c</module>
     </modules>
 
 </project>
